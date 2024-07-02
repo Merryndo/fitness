@@ -1,0 +1,211 @@
+
+body, html {
+    height: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: #000; /* Fondo negro */
+    
+}
+/*ajustar la imagen del logo*/
+.container-fluid {
+    padding: 0px;
+    margin: 0;
+}
+/* Contenido principal */
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center; 
+    padding-top: 100px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Personalizar el estilo del menú hamburguesa */
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilo del carrusel */
+.carouselMio {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px; /* Ajusta la altura según sea necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselMio img {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 2s ease-in-out;
+}
+
+.carouselMio img:nth-child(n + 1) {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+/* Estilos del header */
+header.navbar {
+    background-color: #f8d049; /* Color de fondo */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, .5); /* Sombra */
+    height: 80px;
+    padding: 0;
+}
+.navbar-brand img {
+    height: 80px; /* Tamaño del logo */
+    padding: 0;
+    margin: 0;
+}
+ .nav-item:hover {
+    background-color: #333; /* Color de fondo al pasar el ratón por encima */
+    color: #f8d049; /* Color de texto al pasar el ratón por encima */
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-color: #f8d049; /* Color del icono del botón de alternar */
+}
+.navbar-toggler:hover {
+    background-color: #333; /* Color de fondo al pasar el ratón por encima */
+    border-color: #333; /* Color del borde al pasar el ratón por encima */
+}
+.navbar-toggler-icon:hover {
+    background-color: #333; /* Color de fondo al pasar el ratón por encima */
+}
+.navbar-nav .nav-link {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+.aplastar{
+    position: relative;
+    top: 250px;
+}
+.rs{
+    width: 50px;
+    height: 50px;
+}
+/* menu flotante expieza aqui*/
+/* Estilos básicos para el menú */
+
+.pojo-a11y-toolbar {
+    position: fixed;
+    top: 100px;
+    left: 0; /* Cambiado de right a left */
+    width: 250px; /* Ancho del menú */
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transform: translateX(-100%); /* Ocultar fuera de la vista */
+    transition: transform 0.3s ease-in-out;
+}
+
+.pojo-a11y-toolbar-open {
+    transform: translateX(0); /* Mostrar el menú */
+}
+
+.pojo-a11y-toolbar-button {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    background-color: #0c4a8b;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 50%;
+}
+
+.pojo-a11y-toolbar-close {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+  }
+  
+.light-theme {
+    background-color: #fff;
+    color: #333;
+  }
+
+.invert-gray {
+    filter:grayscale(100%);
+}
+
+.invert-colors {
+    filter: invert(100%);
+}
+/* drop down menu*/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left:50px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 2em;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+  /*boton de ir arriba*/
+  #button-up{
+    width: 60px;
+    height: 60px;
+    background-color: #f8d049;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 0px;
+    right: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;
+    margin-top: 20px;
+    z-index: 2;
+    transform: scale(0);
+  }
+  #button-up:hover{
+    transform: scale(1.1);
+    border-color: rgba(0,0,0,0.1);
+    transition: all 300ms ease;
+  }
